@@ -1,0 +1,16 @@
+<h1>Web Crawler</h1>
+
+<%= form_tag(crawl_path, method: :post) do %>
+  <%= text_field_tag(:url) %>
+  <%= submit_tag("Crawl") %>
+<% end %>
+
+<h2>Crawled Pages:</h2>
+<ul>
+  <% @pages.each do |page| %>
+    <li>
+      <strong><%= page.title %></strong>
+      <p><%= page.content %></p>
+    </li>
+  <% end %>
+</ul>

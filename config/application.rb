@@ -17,7 +17,7 @@ module RailsTemplate
       g.javascripts false
       g.helper false
       g.decorator false
-      g.test_framework false
+      g.test_framework = { check_default_type: false }
       g.fixture_replacement :factory_bot, dir: 'spec/factories'
       g.template_engine :erb
     end
